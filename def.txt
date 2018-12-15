@@ -1,0 +1,33 @@
+
+Serializers allow complex data such as querysets and model instances to be converted to native Python datatypes that can then be easily rendered into JSON, XML or other content types. Serializers also provide deserialization, allowing parsed data to be converted back into complex types, after first validating the incoming data.
+
+	•	The model(M) is a model or representation of your data. The model allows you to pull data from your database without knowing the intricacies of the underlying database.
+	•	The view(V) is what you see. It’s the presentation layer for your model (in the browser for a Web app, or the UI for a desktop app).
+	•	The controller(C) controls the flow of information between the model and the view. It uses programmed logic to decide what information is pulled from the database via the model and what information is passed to the view.
+
+When you use an application on your mobile phone, the application connects to the Internet and sends data to a server. The server then retrieves that data, interprets it, performs the necessary actions and sends it back to your phone. The application then interprets that data and presents you with the information you wanted in a readable way. This is what an API is - all of this happens via API.
+
+JSON - (JavaScript Object Notation) is a way to store information in an organized, easy-to-access manner. It gives us a human-readable collection of data that we can access in a really logical manner.
+
+Django’s generic views... were developed as a shortcut for common usage patterns... They take certain common idioms and patterns found in view development and abstract them so that you can quickly write common views of data without having to repeat yourself.
+
+Общие представления Django ... были разработаны в качестве ярлыка для общих шаблонов использования ... Они используют определенные общие идиомы и шаблоны, обнаруженные при разработке представлений, и абстрагируют их, чтобы вы могли быстро написать общие представления данных без необходимости повторения.
+
+Migrations are Django’s way of propagating changes you make to your models (adding a field, deleting a model, etc.) into your database schema.
+Миграции - это способ Django распространять изменения, которые вы вносите в свои модели (добавление поля, удаление модели и т. Д.), В схему базы данных
+
+ViewSet classes are almost the same thing as View classes, except that they provide operations such as read, or update, and not method handlers such as get or put.
+
+Resource routing allows you to quickly declare all of the common routes for a given resourceful controller. Instead of declaring separate routes for your index... a resourceful route declares them in a single line of code.
+
+We can use function-based views(FBV) and generic views(class-based views[CBV]) to develop rest API by using the Django-REST-Framework. It's a good approach to use FBV or CBV  with defined URL configurations. Mapping views with the URL's is a good idea but, probably not the best. We can better organize this by using Routers and ViewSets.
+
+Advantages using ViewSets and Routers over traditional views
+	•	We can avoid configuring the URL's with views.
+	•	Routers generate automatic URL patterns and maps every URL to its respective method based on a type of the request.
+	•	It deals with a little abstraction but, it can speed up the development process.
+	•	We can also speed up the debugging process as well with a little practice.
+	•	Router generates standardized url patterns.
+	•	We can expect consistent behaviour from viewsets and routers
+	•	We can avoid repetitive code in views. For example, in traditional views we need to have two api views for detail and list. But, we can achive it with a single ViewSet class.
+	•	If we develop a large api and if we don't use viewset and routers then it will result in more views and urls. It will definitely affect our application(api) maintainablity and development time.
